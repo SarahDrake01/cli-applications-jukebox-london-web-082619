@@ -27,7 +27,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.chomp #gets.chomp is used to take string input from users.
-  if (1..9).to_a.include?(user_response.to_i)
+  if (1..9).to_a.include?(user_response.to_i) #The 'to_a' simply tells Ruby: "take this range of 9 numbers and turn it into an array of numbers".
     puts "Playing #{songs[user_response.to_i - 1]}"
     elsif songs.include?(user_response)
     puts "Playing #{user_response}"
